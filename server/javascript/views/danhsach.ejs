@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nhân viên</title>
+  </head>
+  <body>
+    <table width="500" border="1">
+      <tr>
+          <td>Mã số</td>
+          <td>Họ và tên</td>
+          <td>Ngay sinh</td>
+          <td>Gioi tinh</td>
+          <td>Dia chi</td>
+          <td>Ma xa</td>
+          <td><a href="../nhanvien/them"> Thêm</a></td>
+      </tr>
+      <% for (var i = 0; i < benhnhan.length; i++){ %>
+      <tr>
+          <td><%= benhnhan[i][Record].mabn %></td>
+          <td><%= benhnhan[i][Record].hoten %></td>
+          <td><%= benhnhan[i][Record].ngaysinh %></td>
+          <td><%= benhnhan[i][Record].gioitinh %></td>
+          <td><%= benhnhan[i][Record].diachi %></td>
+          <td><%= benhnhan[i][Record].diachi %></td>
+          <td>
+              <a href="../nhanvien/sua/<%= benhnhan[i][Record].mabn %>"> Sửa</a> -
+              <a href="../nhanvien/xoa/<%= benhnhan[i][Record].mabn %>"> Xóa</a>
+          </td>
+      </tr>
+      <%});%>
+    </table>
+  </body>
+</html>

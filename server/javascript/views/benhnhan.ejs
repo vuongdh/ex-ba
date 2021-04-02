@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>COVID19 Dashboard</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <div class="container">
+    <h1>DANH SACH Dashboard</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Ho va ten</th>
+          <th>Gioi tinh</th>
+          <th>Ngay sinh</th>
+          <th>Dia chi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(const bn of obj) { %>
+          <tr>
+            <td><%= bn.Record.mabn %></td>
+            <td><%= bn.Record.hoten %></td>
+            <td><%= bn.Record.gioitinh %></td>
+            <td><%= bn.Record.ngaysinh %></td>
+            <td><%= bn.Record.diachi %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
